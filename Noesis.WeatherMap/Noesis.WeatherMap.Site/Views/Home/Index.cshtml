@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script><script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+
+<div class="container">
+    <div class="row">
+        <div class="col-6" style="text-align:center;margin-top:25%">
+    
+            <select id="selectElementId">
+                <option disabled>Choose a profile</option>
+            </select>
+        </div>
+        <div class="col-6" style="text-align:center;margin-top:25%">
+    
+            <select id="selectElementId">
+                <option disabled>Choose a profile</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<script>
+
+$(document).ready(function () {
+
+    $.ajax({
+        url: "/Home/GetUsers",
+        type: "GET",
+        dataType: "json",
+       
+        success: function (data) {
+           
+            var select = document.getElementById('selectElementId');
+
+            for (var i = 0; i<=data.value.length; i++){
+                var opt = document.createElement('option');
+                opt.value = data.value[i].id;
+                opt.innerHTML = data.value[i].name;
+                select.appendChild(opt);
+            }
+        }
+    });
+
+});
+
+</script>

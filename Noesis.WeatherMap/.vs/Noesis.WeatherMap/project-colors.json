@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "e639627e-aa63-4341-985b-0d4cef28e5fc": {
+      "ProjectGuid": "e639627e-aa63-4341-985b-0d4cef28e5fc",
+      "DisplayName": "Noesis.WeatherMap.Site",
+      "ColorIndex": 0
+    },
+    "2297a600-32d1-4c26-b437-6724ffa7f97b": {
+      "ProjectGuid": "2297a600-32d1-4c26-b437-6724ffa7f97b",
+      "DisplayName": "Noesis.WeatherMap.Data",
+      "ColorIndex": 1
+    },
+    "a98e63e2-0fa2-46dc-99ac-fe86802c1f9c": {
+      "ProjectGuid": "a98e63e2-0fa2-46dc-99ac-fe86802c1f9c",
+      "DisplayName": "Noesis.WeatherMap.Data",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}
