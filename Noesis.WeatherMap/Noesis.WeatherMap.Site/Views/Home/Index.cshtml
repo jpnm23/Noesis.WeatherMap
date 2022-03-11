@@ -1,47 +1,82 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-<script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script><script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+﻿@*@model Noesis.WeatherMap.API.Models.UserViewModel*@
+
+@{ ViewData["Title"] = "Home Page"; }
+<script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
 
 <div class="container">
     <div class="row">
         <div class="col-6" style="text-align:center;margin-top:25%">
-    
+
             <select id="selectElementId">
                 <option disabled>Choose a profile</option>
             </select>
+            <br />
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Entrar" onclick="login()" class="btn btn-primary" />
+            </div>
+
         </div>
+
         <div class="col-6" style="text-align:center;margin-top:25%">
-    
-            <select id="selectElementId">
-                <option disabled>Choose a profile</option>
-            </select>
+
+            <input type="text" id="inputName" />
+            <br />
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Criar perfil e entrar" onclick="createUser()" class="btn btn-primary" />
+            </div>
+
         </div>
     </div>
 </div>
 
 <script>
 
-$(document).ready(function () {
-
-    $.ajax({
-        url: "/Home/GetUsers",
-        type: "GET",
-        dataType: "json",
-       
-        success: function (data) {
-           
-            var select = document.getElementById('selectElementId');
-
-            for (var i = 0; i<=data.value.length; i++){
-                var opt = document.createElement('option');
-                opt.value = data.value[i].id;
-                opt.innerHTML = data.value[i].name;
-                select.appendChild(opt);
+    function createUser() {
+        $.ajax({
+            method: "POST",
+            url: "/Home/AddUser",
+            data: { name: $("#inputName").val() },
+            success: function (data) {
+                window.location = 'https://localhost:44312/Favorites/index?id=' + data.value.id;
+            },
+            error: function(data) {
+                console.log(data);
             }
-        }
-    });
+        });
+    }
 
-});
+    function login() {
+
+        console.log($('#selectElementId').find(":selected").val());
+        window.location = 'https://localhost:44312/Favorites/Index?id=' + $('#selectElementId').find(":selected").val();
+    }
+
+
+
+    $(document).ready(function () {
+
+        $.ajax({
+            url: "/Home/GetUsers",
+            type: "GET",
+            dataType: "json",
+
+            success: function (data) {
+                var result = JSON.parse(data);
+                console.log(result[0].id);
+                var select = document.getElementById('selectElementId');
+
+                for (var i = 0; i <= result.length; i++) {
+                    var opt = document.createElement('option');
+                    opt.value = result[i].id;
+                    opt.innerHTML = result[i].name;
+                    select.appendChild(opt);
+                }
+            }
+        });
+
+    });
 
 </script>

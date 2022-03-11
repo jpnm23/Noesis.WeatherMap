@@ -15,7 +15,12 @@
       "ProjectGuid": "a98e63e2-0fa2-46dc-99ac-fe86802c1f9c",
       "DisplayName": "Noesis.WeatherMap.Data",
       "ColorIndex": 2
+    },
+    "5cb3df5a-54d7-488f-9665-c61579371620": {
+      "ProjectGuid": "5cb3df5a-54d7-488f-9665-c61579371620",
+      "DisplayName": "Noesis.WeatherMap.API",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 4
 }

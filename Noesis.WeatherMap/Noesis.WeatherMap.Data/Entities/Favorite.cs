@@ -13,8 +13,6 @@ namespace Noesis.WeatherMap.Data.Entities
         public string Latitude { get; set; }
         public string City { get; set; }
         public string Country { get; set; }
-
-        public int UserId { get; set; }
         public User Users { get; set; }
     }
 }

@@ -21,3 +21,14 @@ C:\Users\joao.p.moreira\source\repos\Noesis.WeatherMap\Noesis.WeatherMap.Data\ob
 C:\Users\joao.p.moreira\source\repos\Noesis.WeatherMap\Noesis.WeatherMap.Data\obj\Debug\net5.0\refint\Noesis.WeatherMap.Data.dll
 C:\Users\joao.p.moreira\source\repos\Noesis.WeatherMap\Noesis.WeatherMap.Data\obj\Debug\net5.0\Noesis.WeatherMap.Data.pdb
 C:\Users\joao.p.moreira\source\repos\Noesis.WeatherMap\Noesis.WeatherMap.Data\obj\Debug\net5.0\ref\Noesis.WeatherMap.Data.dll
+C:\Users\carmo\source\repos\Noesis.WeatherMap\Noesis.WeatherMap\Noesis.WeatherMap.Data\bin\Debug\net5.0\Noesis.WeatherMap.Data.deps.json
+C:\Users\carmo\Source\Repos\Noesis.WeatherMap\Noesis.WeatherMap\Noesis.WeatherMap.Data\bin\Debug\net5.0\Noesis.WeatherMap.Data.dll
+C:\Users\carmo\source\repos\Noesis.WeatherMap\Noesis.WeatherMap\Noesis.WeatherMap.Data\bin\Debug\net5.0\ref\Noesis.WeatherMap.Data.dll
+C:\Users\carmo\Source\Repos\Noesis.WeatherMap\Noesis.WeatherMap\Noesis.WeatherMap.Data\bin\Debug\net5.0\Noesis.WeatherMap.Data.pdb
+C:\Users\carmo\Source\Repos\Noesis.WeatherMap\Noesis.WeatherMap\Noesis.WeatherMap.Data\obj\Debug\net5.0\Noesis.WeatherMap.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carmo\Source\Repos\Noesis.WeatherMap\Noesis.WeatherMap\Noesis.WeatherMap.Data\obj\Debug\net5.0\Noesis.WeatherMap.Data.AssemblyInfoInputs.cache
+C:\Users\carmo\Source\Repos\Noesis.WeatherMap\Noesis.WeatherMap\Noesis.WeatherMap.Data\obj\Debug\net5.0\Noesis.WeatherMap.Data.AssemblyInfo.cs
+C:\Users\carmo\Source\Repos\Noesis.WeatherMap\Noesis.WeatherMap\Noesis.WeatherMap.Data\obj\Debug\net5.0\Noesis.WeatherMap.Data.csproj.CoreCompileInputs.cache
+C:\Users\carmo\Source\Repos\Noesis.WeatherMap\Noesis.WeatherMap\Noesis.WeatherMap.Data\obj\Debug\net5.0\Noesis.WeatherMap.Data.dll
+C:\Users\carmo\Source\Repos\Noesis.WeatherMap\Noesis.WeatherMap\Noesis.WeatherMap.Data\obj\Debug\net5.0\ref\Noesis.WeatherMap.Data.dll
+C:\Users\carmo\Source\Repos\Noesis.WeatherMap\Noesis.WeatherMap\Noesis.WeatherMap.Data\obj\Debug\net5.0\Noesis.WeatherMap.Data.pdb

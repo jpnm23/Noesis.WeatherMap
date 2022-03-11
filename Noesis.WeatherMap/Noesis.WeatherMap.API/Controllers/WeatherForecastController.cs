@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Noesis.WeatherMap.Data.Entities;
-using Noesis.WeatherMap.Data.Controllers;
 
 namespace Noesis.WeatherMap.API.Controllers
 {
@@ -35,11 +34,7 @@ namespace Noesis.WeatherMap.API.Controllers
                 TemperatureC = rng.Next(-20, 55),
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
-            .ToArray();
-
-            
-
-           
+            .ToArray();           
         }
     }
 }
