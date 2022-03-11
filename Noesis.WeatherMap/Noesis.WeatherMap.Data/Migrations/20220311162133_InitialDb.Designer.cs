@@ -10,7 +10,7 @@ using Noesis.WeatherMap.Data;
 namespace Noesis.WeatherMap.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220311130754_InitialDb")]
+    [Migration("20220311162133_InitialDb")]
     partial class InitialDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

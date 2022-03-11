@@ -19,9 +19,9 @@ namespace Noesis.WeatherMap.Data.Repositories
             return _context.Users.OrderBy(u => u.Name).ToList();
         }
 
-        public User GetUser(string name)
+        public User GetUser(int id)
         {
-            return _context.Users.FirstOrDefault(u => u.Name == name);
+            return _context.Users.FirstOrDefault(u => u.Id == id);
         }
 
         public void AddUser(User user)

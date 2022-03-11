@@ -55,25 +55,6 @@ namespace Noesis.WeatherMap.API.Controllers
             return Ok(user);
         }
 
-        [Route("GetUserByName")]
-        [HttpGet]
-        public IActionResult GetUser(string name)
-        {
-            if (String.IsNullOrEmpty(name))
-            {
-                return BadRequest();
-            }
-            if (!_userHelper.UserExists(name))
-            {
-                return NotFound();
-            }
-            var user = _userHelper.GetUser(name);
-
-            if (user == null)
-            {
-                throw new ArgumentNullException("User is null!");
-            }
-            return Ok(user);
-        }
+        
     }
 }
