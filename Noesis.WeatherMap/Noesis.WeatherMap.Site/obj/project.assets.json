@@ -8,20 +8,30 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\joao.p.moreira\\.nuget\\packages\\": {}
+    "C:\\Users\\carmo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\joao.p.moreira\\Documents\\GitHub\\Noesis.WeatherMap\\Noesis.WeatherMap\\Noesis.WeatherMap.Site\\Noesis.WeatherMap.Site.csproj",
+      "projectUniqueName": "C:\\Users\\carmo\\Documents\\GitHub\\Noesis.WeatherMap\\Noesis.WeatherMap\\Noesis.WeatherMap.Site\\Noesis.WeatherMap.Site.csproj",
       "projectName": "Noesis.WeatherMap.Site",
-      "projectPath": "C:\\Users\\joao.p.moreira\\Documents\\GitHub\\Noesis.WeatherMap\\Noesis.WeatherMap\\Noesis.WeatherMap.Site\\Noesis.WeatherMap.Site.csproj",
-      "packagesPath": "C:\\Users\\joao.p.moreira\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\joao.p.moreira\\Documents\\GitHub\\Noesis.WeatherMap\\Noesis.WeatherMap\\Noesis.WeatherMap.Site\\obj\\",
+      "projectPath": "C:\\Users\\carmo\\Documents\\GitHub\\Noesis.WeatherMap\\Noesis.WeatherMap\\Noesis.WeatherMap.Site\\Noesis.WeatherMap.Site.csproj",
+      "packagesPath": "C:\\Users\\carmo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\carmo\\Documents\\GitHub\\Noesis.WeatherMap\\Noesis.WeatherMap\\Noesis.WeatherMap.Site\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\joao.p.moreira\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\carmo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -55,6 +65,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[5.0.13, 5.0.13]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -63,7 +79,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
