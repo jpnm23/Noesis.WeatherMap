@@ -17,6 +17,7 @@ namespace Noesis.WeatherMap.API.Controllers
         {
             _userHelper = userHelper;
         }
+
         [Route("GetUsers")]
         [HttpGet]
         public IActionResult GetUsers()
@@ -25,7 +26,7 @@ namespace Noesis.WeatherMap.API.Controllers
 
             if (users == null)
             {
-                throw new ArgumentNullException("The list is empty!");
+                return BadRequest();
             }
 
             return Ok(users);
@@ -37,7 +38,7 @@ namespace Noesis.WeatherMap.API.Controllers
         {
             if (String.IsNullOrEmpty(name))
             {
-                return BadRequest(new { message = "Not valid!" });
+                return BadRequest(new { message = "String null" });
             }
             if (_userHelper.UserExists(name))
             {
@@ -55,6 +56,5 @@ namespace Noesis.WeatherMap.API.Controllers
             return Ok(user);
         }
 
-        
     }
 }

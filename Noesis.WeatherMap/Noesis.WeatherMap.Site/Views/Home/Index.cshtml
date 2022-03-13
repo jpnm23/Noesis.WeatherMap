@@ -1,7 +1,6 @@
-﻿@*@model Noesis.WeatherMap.API.Models.UserViewModel*@
-
-@{ ViewData["Title"] = "Home Page"; }
-<script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
 <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
 
 <div class="container">
@@ -40,21 +39,18 @@
             url: "/Home/AddUser",
             data: { name: $("#inputName").val() },
             success: function (data) {
-                window.location = 'https://localhost:44312/Favorites/index?id=' + data.value.id;
-            },
-            error: function(data) {
                 console.log(data);
+                var result = JSON.parse(data);
+                console.log(result);
+                window.location = 'https://localhost:44312/Home/Favorite?id=' + result.id;
             }
         });
     }
 
     function login() {
-
         console.log($('#selectElementId').find(":selected").val());
-        window.location = 'https://localhost:44312/Favorites/Index?id=' + $('#selectElementId').find(":selected").val();
+        window.location = 'https://localhost:44312/Home/Favorite?id=' + $('#selectElementId').find(":selected").val();
     }
-
-
 
     $(document).ready(function () {
 
@@ -62,7 +58,6 @@
             url: "/Home/GetUsers",
             type: "GET",
             dataType: "json",
-
             success: function (data) {
                 var result = JSON.parse(data);
                 console.log(result[0].id);
@@ -76,7 +71,6 @@
                 }
             }
         });
-
     });
 
 </script>

@@ -44,3 +44,15 @@ C:\Users\joao.p.moreira\Documents\GitHub\Noesis.WeatherMap\Noesis.WeatherMap\Noe
 C:\Users\joao.p.moreira\Documents\GitHub\Noesis.WeatherMap\Noesis.WeatherMap\Noesis.WeatherMap.Data\obj\Debug\net5.0\refint\Noesis.WeatherMap.Data.dll
 C:\Users\joao.p.moreira\Documents\GitHub\Noesis.WeatherMap\Noesis.WeatherMap\Noesis.WeatherMap.Data\obj\Debug\net5.0\Noesis.WeatherMap.Data.pdb
 C:\Users\joao.p.moreira\Documents\GitHub\Noesis.WeatherMap\Noesis.WeatherMap\Noesis.WeatherMap.Data\obj\Debug\net5.0\ref\Noesis.WeatherMap.Data.dll
+C:\Users\carmo\Documents\GitHub\Noesis.WeatherMap\Noesis.WeatherMap\Noesis.WeatherMap.Data\obj\Debug\net5.0\Noesis.WeatherMap.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carmo\Documents\GitHub\Noesis.WeatherMap\Noesis.WeatherMap\Noesis.WeatherMap.Data\obj\Debug\net5.0\Noesis.WeatherMap.Data.AssemblyInfoInputs.cache
+C:\Users\carmo\Documents\GitHub\Noesis.WeatherMap\Noesis.WeatherMap\Noesis.WeatherMap.Data\obj\Debug\net5.0\Noesis.WeatherMap.Data.AssemblyInfo.cs
+C:\Users\carmo\Documents\GitHub\Noesis.WeatherMap\Noesis.WeatherMap\Noesis.WeatherMap.Data\obj\Debug\net5.0\Noesis.WeatherMap.Data.csproj.CoreCompileInputs.cache
+C:\Users\carmo\Documents\GitHub\Noesis.WeatherMap\Noesis.WeatherMap\Noesis.WeatherMap.Data\obj\Debug\net5.0\Noesis.WeatherMap.Data.dll
+C:\Users\carmo\Documents\GitHub\Noesis.WeatherMap\Noesis.WeatherMap\Noesis.WeatherMap.Data\obj\Debug\net5.0\ref\Noesis.WeatherMap.Data.dll
+C:\Users\carmo\Documents\GitHub\Noesis.WeatherMap\Noesis.WeatherMap\Noesis.WeatherMap.Data\obj\Debug\net5.0\Noesis.WeatherMap.Data.pdb
+C:\Users\carmo\Documents\GitHub\Noesis.WeatherMap\Noesis.WeatherMap\Noesis.WeatherMap.Data\bin\Debug\net5.0\Noesis.WeatherMap.Data.deps.json
+C:\Users\carmo\Documents\GitHub\Noesis.WeatherMap\Noesis.WeatherMap\Noesis.WeatherMap.Data\bin\Debug\net5.0\Noesis.WeatherMap.Data.dll
+C:\Users\carmo\Documents\GitHub\Noesis.WeatherMap\Noesis.WeatherMap\Noesis.WeatherMap.Data\bin\Debug\net5.0\ref\Noesis.WeatherMap.Data.dll
+C:\Users\carmo\Documents\GitHub\Noesis.WeatherMap\Noesis.WeatherMap\Noesis.WeatherMap.Data\bin\Debug\net5.0\Noesis.WeatherMap.Data.pdb
+C:\Users\carmo\Documents\GitHub\Noesis.WeatherMap\Noesis.WeatherMap\Noesis.WeatherMap.Data\obj\Debug\net5.0\Noesis.WeatherMap.Data.csproj.AssemblyReference.cache

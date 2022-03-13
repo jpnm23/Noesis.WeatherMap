@@ -1,0 +1,200 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Map</title>
+
+    <style>
+        /* Set the size of the div element that contains the map */
+        #map {
+            height: 400px;
+            /* The height is 400 pixels */
+            width: 100%;
+            /* The width is the width of the web page */
+        }
+    </style>
+
+    <script>
+        function getParameter(parameterName) {
+            let parameters = new URLSearchParams(window.location.search);
+            return parameters.get(parameterName);
+        }
+
+
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+    <div>
+        <div class="row">
+            <div class="col-8">
+                <!--The div element for the map -->
+                <div id="map"></div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-header text-center">
+                        <label id="lblCity"></label>
+                        <label style="display:none;" id="lblCountry"></label>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"><label id="lblDescription"></label></h5>
+                        <p class="card-text">Temperatura: <label id="lblTemp"></label>º C</p>
+                        <p class="card-text">Real Feel: <label id="lblFeelsLike"></label>º C</p>
+                        <p class="card-text">Humidade: <label id="lblHumidity"></label>%</p>
+                        <p class="card-text">Vento: <label id="lblWind"></label> km/h</p>
+                        <input type="button" id="addFav" class="btn btn-primary" value="Guardar localização" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6YW0YWSkyDskcunewOJEGg572FOUL0SA&callback=initMap&libraries=&v=weekly"></script>
+</body>
+</html>
+
+<script>
+
+    let map;
+    let markers = [];
+    let coordinate;
+    let favMarkers = [];
+
+    // Initialize and add the map
+    function initMap() {
+        // The location of Uluru
+        const uluru = { lat: 38.718994, lng: -9.144538 };
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 12,
+            center: uluru,
+        });
+
+        function SetMarkers(map) {
+
+        $.ajax({
+            url: "/Home/GetUserFavorites?id=" + getParameter("id"),
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+                var result = JSON.parse(data);
+
+                const image = {
+                    url: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+                    // This marker is 20 pixels wide by 32 pixels high.
+                    size: new google.maps.Size(20, 32),
+                    // The origin for this image is (0, 0).
+                    origin: new google.maps.Point(0, 0),
+                    // The anchor for this image is the base of the flagpole at (0, 32).
+                    anchor: new google.maps.Point(0, 32),
+                  };
+
+                for (let i = 0; i < result.length; i++) {
+                    const fav = result[i];
+                    let favMarker = new google.maps.Marker({
+                      position: { lat: parseFloat(fav.latitude), lng: parseFloat(fav.longitude) },
+                      map,
+                      icon: image,
+                      title: fav.city,
+                    });
+                    favMarkers.push(favMarker);
+               }
+
+            }
+        });
+    };
+
+        SetMarkers(map);
+
+
+
+        //add mark to map
+        map.addListener('click',
+            (event) => {
+                deleteMarkers(null);
+                addMarker({ coords: event.latLng });
+            });
+
+        function addMarker(props) {
+            // The marker, positioned at Uluru
+            const marker = new google.maps.Marker({
+                position: props.coords,
+                map: map
+            });
+            markers.push(marker);
+            coordinate = props.coords;
+            getWeatherByMark();
+            SetMarkers(map);
+
+        }
+
+        function deleteMarkers(map) {
+
+            for (let i = 0; i < markers.length; i++) {
+                markers[i].setMap(map);
+            }
+
+            markers = [];
+        };
+
+         function deleteFavMarkers(city) {
+            let map = null;
+
+            for (let i = 0; i < favMarkers.length; i++) {
+                favMarkers[i].setMap(map);
+            }
+            favMarkers = [];
+        };
+
+        function getWeatherByMark() {
+            $.ajax({
+                method: "GET",
+                url: "/Home/GetWeatherByMark?location=" + coordinate,
+                success: function(data){
+                    var result = JSON.parse(data);
+                    console.log(result);
+                    $("#lblCity").html(result.city);
+                    $("#lblDescription").html(result.description);
+                    $("#lblTemp").html(result.temp);
+                    $("#lblFeelsLike").html(result.feelsLike);
+                    $("#lblHumidity").html(result.humidity);
+                    $("#lblWind").html(result.wind);
+                    $("#lblCountry").html(result.country);
+                },
+            });
+        };
+
+
+        document.getElementById("addFav").addEventListener("click", function addFav() {
+
+            console.log(favMarkers[0]);
+
+                var favorites = {
+                    longitude: coordinate.lng,
+                    latitude: coordinate.lat,
+                    city: $("#lblCity").html(),
+                    country: $("#lblCountry").html(),
+                    userId: getParameter("id")};
+                $.ajax({
+                url: "/Home/AddUserFav",
+                method: "POST",
+                data: favorites,
+                success: function (data) {
+                    for (let i = 0; i <= favMarkers.length; i++) {
+                        if(favMarkers[i].title == $("#lblCity").html()){
+                            favMarkers[i].setMap(null);
+                        }
+                    };
+                },
+                });
+                    }, false);
+
+                     
+    }
+</script>

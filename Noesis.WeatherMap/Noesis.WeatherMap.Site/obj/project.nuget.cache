@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Z/jzQJXGtvTh53Ki8dAH7AlmkIZEqRIPq7hCetaTDDVFTHeAJKRdOzMjFpg42QJY2u5xTcqowUyslbhk5Ej5OQ==",
+  "dgSpecHash": "F2BJGufM7fQvfpttF5V+IWGLfYVC0x4s7eRH1FIptACvDdJcdohWsyCs1aCNwKKxoJT2lMq42qmWG1qaL3IQdw==",
   "success": true,
   "projectFilePath": "C:\\Users\\carmo\\Documents\\GitHub\\Noesis.WeatherMap\\Noesis.WeatherMap\\Noesis.WeatherMap.Site\\Noesis.WeatherMap.Site.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\carmo\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\carmo\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512"
   ],
   "logs": []

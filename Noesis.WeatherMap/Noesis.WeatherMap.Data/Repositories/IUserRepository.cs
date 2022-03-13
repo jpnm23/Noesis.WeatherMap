@@ -7,9 +7,10 @@ namespace Noesis.WeatherMap.Data.Repositories
     public interface IUserRepository
     {
         void AddUser(User user);
-        User GetUserId(int id);
+        User GetUserById(int id);
         IEnumerable<User> GetUsers();
         Task<bool> SaveAllAsync();
+        bool VerifyUser(string name);
         bool UserExists(string name);
     }
 }
